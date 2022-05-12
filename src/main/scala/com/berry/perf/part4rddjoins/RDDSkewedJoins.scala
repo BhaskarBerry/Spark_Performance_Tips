@@ -15,9 +15,7 @@ object RDDSkewedJoins {
   /*
     An online store selling gaming laptops.
     2 laptops are "similar" if they have the same make & model, but proc speed within 0.1
-
     For each laptop configuration, we are interested in the average sale price of "similar" models.
-
     Acer Predator 2.9Ghz aylfaskjhrw -> average sale price of all Acer Predators with CPU speed between 2.8 and 3.0 GHz
    */
 
@@ -92,6 +90,7 @@ object RDDSkewedJoins {
 
   def main(args: Array[String]): Unit = {
     noSkewJoin()
+//    plainJoin()
     Thread.sleep(1000000)
   }
 }

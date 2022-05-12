@@ -100,7 +100,7 @@ This cluster is shipped with three workers and one spark master, each of these h
 
 To make app running easier I've shipped two volume mounts described in the following chart:
 
-Host Mount|Container Mount|Purposse
+Host Mount|Container Mount|Purpouse
 ---|---|---
 /mnt/spark-apps|/opt/spark-apps|Used to make available your app's jars on all workers & master
 /mnt/spark-data|/opt/spark-data| Used to make available your app's data on all workers & master

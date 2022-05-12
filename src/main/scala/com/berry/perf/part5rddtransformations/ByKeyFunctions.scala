@@ -22,7 +22,7 @@ object ByKeyFunctions {
     Scenario: assume we have a dataset with (word, occurrences) which we obtained after scraping a big document or website.
     We want to aggregate and sum all values under a single map.
    */
-  val words = Source.fromFile("/opt/spark-data/words.txt").getLines().toSeq
+  val words = Source.fromFile("C:\\KT\\Spark_Performance_Tips\\src\\main\\resources\\data\\lipsum\\words.txt").getLines().toSeq
 
   // generate data
   val random = new Random

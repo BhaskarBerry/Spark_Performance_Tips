@@ -33,13 +33,13 @@ object BroadcastJoins {
 
   // the innocent join
   val joined = table.join(lookupTable, "id")
-  joined.explain
-  // joined.show - takes an ice age
+  joined.explain()
+  //joined.show()   // takes an ice age
 
   // a smarter join
   val joinedSmart = table.join(broadcast(lookupTable), "id")
   joinedSmart.explain()
-  // joinedSmart.show()
+//  joinedSmart.show()
 
   // auto-broadcast detection
   val bigTable = spark.range(1, 100000000)
@@ -47,7 +47,7 @@ object BroadcastJoins {
   val joinedNumbers = smallTable.join(bigTable, "id")
 
   // deactivate auto-broadcast
-  spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
+//  spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
 
   joinedNumbers.explain()
 
